@@ -3,8 +3,8 @@ $(document).ready(() => {
     type: "GET",
     url: "https://sga.unemi.edu.ec/api?a=apiarticulos",
     beforeSend: () => {
-      $("#loading").show();
-      $("#papers").hide();
+      $("#onload").show();
+      $("#content").hide();
     },
     success: (data) => {
       data.forEach((element) => {
@@ -20,9 +20,10 @@ $(document).ready(() => {
           nombre +
           "</td></tr>";
         $(linea).appendTo("#dataTable tbody");
-        $("#loading").hide();
-        $("#papers").show();
+        
       });
+      $("#onload").hide();
+      $("#content").show();
       $("#dataTable").DataTable();
     },
   });

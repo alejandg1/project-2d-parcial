@@ -23,11 +23,8 @@
       href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
       rel="stylesheet"
     />
-
-    <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet" />
   </head>
-
   <body id="page-top">
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -133,11 +130,23 @@
 
       <!-- Content Wrapper -->
       <div id="content-wrapper" class="d-flex flex-column">
+        <!-- listas de gifs
+        https://i.pinimg.com/originals/d8/75/32/d87532bf817b54ec2743c208ccfe5a4c.gif  fantasma
+      https://i.pinimg.com/originals/dd/4e/bf/dd4ebff3f8ddf628757e1acf655836ac.gif   envase de quimico-->
+
+        <div id="onload" class="loader">
+          <img
+            class="img"
+            src="https://i.pinimg.com/originals/d8/75/32/d87532bf817b54ec2743c208ccfe5a4c.gif"
+            alt=""
+          />
+        </div>
+
         <!-- Main Content -->
         <div id="content">
           <!-- Topbar -->
           <nav
-            class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"
+            class="navbar navbar-expand navbar-dark bg-white topbar mb-4 static-top shadow"
           >
             <!-- Sidebar Toggle (Topbar) -->
             <button
@@ -209,30 +218,12 @@
               <div class="topbar-divider d-none d-sm-block"></div>
             </ul>
           </nav>
-          <!-- Begin Page Content -->
-          <center id="loading">
-            <img
-            id="img"
-              class="position-absolute top-50 start-0 translate-middle"
-              src="img/Pulse-1s-267px.svg"
-              alt=""
-            />
-          </center>
+
           <div id="contenido">
-            <center id="loading">
-              <img
-              id="img"
-                class="position-absolute top-50 start-0 translate-middle"
-                src="img/Bean Eater-1s-200px.svg"
-                alt=""
-              />
-            </center>
             <!-- Page Heading -->
             <div
               class="d-sm-flex align-items-center justify-content-between mb-4"
-            
-              >
-            </div>
+            ></div>
 
             <!-- Content Row -->
             <div class="row">
@@ -656,13 +647,13 @@
         <!-- End of Main Content -->
 
         <!-- Footer -->
-        <footer class="sticky-footer bg-white">
+        <!-- <footer class="sticky-footer bg-white">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
               <span>Copyright &copy; Your Website 2021</span>
             </div>
           </div>
-        </footer>
+        </footer> -->
         <!-- End of Footer -->
       </div>
       <!-- End of Content Wrapper -->
@@ -697,5 +688,6 @@
     <script src="js/areas.js"></script>
     <script src="./js/journals.js"></script>
     <script src="js/dtotales.js"></script>
+    <script src="js/load.js"></script>
   </body>
 </html>

@@ -3,8 +3,8 @@ $(document).ready(() => {
     type: "GET",
     url: "https://sga.unemi.edu.ec/api?a=areaconocimiento",
     beforeSend: () => {
-      $("#loading").show();
-      $("#areas").hide();
+      $("#onload").show();
+      $("#content").hide();
     },
     success: (data) => {
       let info = data.areasconocimiento;
@@ -13,9 +13,10 @@ $(document).ready(() => {
         nombre = element.nombre;
         linea = "<tr><td>" + id + "</td><td>" + nombre + "</td></tr>";
         $(linea).appendTo("#dataTable tbody");
-        $("#loading").hide();
-        $("#areas").show();
+        
       });
+      $("#onload").hide();
+      $("#content").show();
       $("#dataTable").DataTable();
     },
   });

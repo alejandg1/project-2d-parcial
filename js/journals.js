@@ -3,8 +3,8 @@ $(document).ready(() => {
     type: "GET",
     url: "https://sga.unemi.edu.ec/api?a=apirevistas",
     beforeSend: () => {
-      $("#loading").show();
-      $("#journals").hide();
+      $("#onload").show();
+      $("#content").hide();
     },
     success: (data) => {
       data.forEach((element) => {
@@ -17,11 +17,11 @@ $(document).ready(() => {
         } else {
           linea = `<tr><td>${tipo}</td><td>${nombre}</td><td><a target ='blank' href='${enlace}' ><i class="fa fa-link"></i></a></td></tr>`;
         }
-        $("#loading").hide();
-        $("#journals").show();
 
         $(linea).appendTo("#dataTable tbody");
       });
+      $("#onload").hide();
+      $("#content").show();
       $("#dataTable").DataTable();
     },
   });

@@ -3,8 +3,8 @@ $(document).ready(() => {
     type: "GET",
     url: "https://sga.unemi.edu.ec/api?a=apiinvestigadores",
     beforeSend: () => {
-      $("#loading").show();
-      $("#researchers").hide();
+      $("#onload").show();
+      $("#content").hide();
     },
     success: (data) => {
       data.forEach((element) => {
@@ -22,9 +22,10 @@ $(document).ready(() => {
           orcid +
           "'><i class='fa fa-link'></i></a></td></tr>";
         $(linea).appendTo("#dataTable tbody");
-        $("#loading").hide();
-        $("#researchers").show();
+        
       });
+      $("#onload").hide();
+      $("#content").show();
       $("#dataTable").DataTable();
     },
   });
