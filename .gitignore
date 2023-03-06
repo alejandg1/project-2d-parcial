@@ -1,7 +1,6 @@
 node_modules
 vendor 
 scss
-css
 .travis.yml
 gulpfile.js
 .browserslistrc
