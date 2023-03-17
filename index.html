@@ -12,8 +12,6 @@
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
     <title>research UNEMI</title>
     <link rel="stylesheet" href="css/loading.css" />
-
-    <!-- Custom fonts for this template-->
     <link
       href="vendor/fontawesome-free/css/all.min.css"
       rel="stylesheet"
@@ -26,14 +24,11 @@
     <link href="css/sb-admin-2.min.css" rel="stylesheet" />
   </head>
   <body id="page-top">
-    <!-- Page Wrapper -->
     <div id="wrapper">
-      <!-- Sidebar -->
       <ul
         class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
         id="accordionSidebar"
       >
-        <!-- Sidebar - Brand -->
         <a
           class="sidebar-brand d-flex align-items-center justify-content-center"
           href="index.html"
@@ -90,7 +85,7 @@
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href='javascript:menuOpciones("data.html")'>
             <i class="fa fa-database"></i>
             <span>Data base</span></a
           >
@@ -103,7 +98,7 @@
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href='javascript:menuOpciones("trends.html")'>
             <i class="fa fa-podcast"></i>
             <span>Trend</span></a
           >
@@ -135,13 +130,7 @@
       https://i.pinimg.com/originals/dd/4e/bf/dd4ebff3f8ddf628757e1acf655836ac.gif   envase de quimico-->
 
         <div id="onload" class="loader">
-          <img
-
-          
-            class="img"
-            src="img/Spin-1s-200px.svg"
-            alt="loading"
-          />
+          <img class="img" src="img/Spin-1s-200px.svg" alt="loading" />
         </div>
 
         <!-- Main Content -->
@@ -387,7 +376,7 @@
                   <div
                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
                   >
-                    <h6 class="m-0 font-weight-bold text-primary">Ar</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Databases</h6>
                     <div class="dropdown no-arrow">
                       <a
                         class="dropdown-toggle"
@@ -421,17 +410,17 @@
                     <div class="chart-pie pt-4 pb-2">
                       <canvas id="myPieChart"></canvas>
                     </div>
-                    <div class="mt-4 text-center small">
+                    <!-- <div class="mt-4 text-center small">
                       <span id="" class="mr-2">
-                        <i class="fas fa-circle text-primary"></i> Direct
+                        <i class="fas fa-circle text-primary"></i> 
                       </span>
                       <span class="mr-2">
-                        <i class="fas fa-circle text-success"></i> Social
+                        <i class="fas fa-circle text-success"></i> 
                       </span>
                       <span class="mr-2">
-                        <i class="fas fa-circle text-info"></i> Referral
+                        <i class="fas fa-circle text-info"></i> 
                       </span>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               </div>
@@ -518,7 +507,7 @@
                 </div>
 
                 <!-- Color System -->
-                <div class="row">
+                <!-- <div class="row">
                   <div class="col-lg-6 mb-4">
                     <div class="card bg-primary text-white shadow">
                       <div class="card-body">
@@ -583,11 +572,10 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
               </div>
 
               <div class="col-lg-6 mb-4">
-                <!-- Illustrations -->
                 <div class="card shadow mb-4">
                   <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">
@@ -596,27 +584,8 @@
                   </div>
                   <div class="card-body">
                     <div class="text-center">
-                      <img
-                        class="img-fluid px-3 px-sm-4 mt-3 mb-4"
-                        style="width: 25rem"
-                        src="img/undraw_posting_photo.svg"
-                        alt="..."
-                      />
                     </div>
-                    <p>
-                      Add some quality, svg illustrations to your project
-                      courtesy of
-                      <a
-                        target="_blank"
-                        rel="nofollow"
-                        href="https://undraw.co/"
-                        >unDraw</a
-                      >, a constantly updated collection of beautiful svg images
-                      that you can use completely free and without attribution!
-                    </p>
-                    <a target="_blank" rel="nofollow" href="https://undraw.co/"
-                      >Browse Illustrations on unDraw &rarr;</a
-                    >
+
                   </div>
                 </div>
 
@@ -628,16 +597,6 @@
                     </h6>
                   </div>
                   <div class="card-body">
-                    <p>
-                      SB Admin 2 makes extensive use of Bootstrap 4 utility
-                      classes in order to reduce CSS bloat and poor page
-                      performance. Custom CSS classes are used to create custom
-                      components and custom utility classes.
-                    </p>
-                    <p class="mb-0">
-                      Before working with this theme, you should become familiar
-                      with the Bootstrap framework, especially the utility
-                      classes.
                     </p>
                   </div>
                 </div>
@@ -691,5 +650,6 @@
     <script src="./js/journals.js"></script>
     <script src="js/dtotales.js"></script>
     <script src="js/load.js"></script>
+    <script src="js/charts/ddatabase.js"></script>
   </body>
 </html>

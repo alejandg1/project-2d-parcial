@@ -9,9 +9,9 @@ $(document).ready(() => {
     type: "GET",
     url: "",
     success: (data) => {
-      //   kanios =  Object.keys(data);
-      //   vpapers = Object.values(data)
-      //   graficar(kanios,vpapers)
+        kanios =  Object.keys(data);
+        vpapers = Object.values(data)
+        graficar(kanios,vpapers)
     },
   });
 });
