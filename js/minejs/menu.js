@@ -4,6 +4,8 @@ function menuOpciones(enlace){
         url:enlace,
         data:{},
         success:(datos) => {
+              
+            
             $('#contenido').html(datos)
         }
     })
