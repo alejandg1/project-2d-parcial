@@ -24,21 +24,19 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 }
 
 //get
-$(document).ready(
-     () => {
-    $.ajax({
-      type: "GET",
-      url: "https://sga.unemi.edu.ec/api?a=apiarticulosanios",
-      success: (data) => {
-          kanios =  Object.keys(data);
-          vpapers = Object.values(data)
-          graficar(kanios,vpapers)
-      },
-    });
-  }
-);
+$(document).ready(() => {
+  $.ajax({
+    type: "GET",
+    url: "https://sga.unemi.edu.ec/api?a=apiarticulosanios",
+    success: (data) => {
+      kanios = Object.keys(data);
+      vpapers = Object.values(data);
+      graficar(kanios, vpapers);
+    },
+  });
+});
 
-function graficar(kanios, vpapers) {
+graficar = (kanios, vpapers) => {
   var ctx = document.getElementById("myAreaChart");
   var myLineChart = new Chart(ctx, {
     type: "line",
@@ -134,4 +132,4 @@ function graficar(kanios, vpapers) {
       },
     },
   });
-}
+};
