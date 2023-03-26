@@ -3,6 +3,10 @@ $(document).ready(function () {
     type: "GET",
     url: "https://sga.unemi.edu.ec/api?a=apirankingautorespublicacion",
     data: {},
+    beforesend: () => {
+      $("#onload").show();
+      $("#content").hide();
+    },
     success: function (data) {
       nombres = [];
       valores = [];
@@ -14,6 +18,8 @@ $(document).ready(function () {
         nombres.push(nombre);
         valores.push(valor);
       });
+      $("#onload").hide();
+      $("#content").show();
 
       grafico(nombres, valores);
     },
@@ -56,8 +62,7 @@ function grafico(nombres, valores) {
     options: {
       legend: {
         display: true,
-
-      }
+      },
     },
   });
 }

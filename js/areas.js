@@ -13,10 +13,9 @@ $(document).ready(() => {
         nombre = element.nombre;
         linea = "<tr><td>" + id + "</td><td>" + nombre + "</td></tr>";
         $(linea).appendTo("#dataTable tbody");
-        
+
       });
-      $("#onload").hide();
-      $("#content").show();
+      $("#onload").hide(); $("#content").show();
       $("#dataTable").DataTable();
     },
   });
