@@ -1,4 +1,4 @@
-import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm"; 
 
 $(document).ready(() => {
   let files = [];
@@ -103,7 +103,7 @@ function BubbleChart(
     .attr("font-size", 20)
     .attr("font-family", "sans-serif")
     .attr("text-anchor", "middle")
-    .attr("color","#000");
+    .attr("color", "#000");
 
   const leaf = svg
     .selectAll("a")
