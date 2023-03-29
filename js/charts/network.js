@@ -56,7 +56,7 @@ function autoresUnicos(papers, grupo) {
 }
 
 function detectCollaborations(papers) {
-  let relaciones=[]
+  let relaciones=[], links=[]
   let encontrado = false;
   papers.forEach((paper) => {
     //crea arreglo con los autores de cada paper
@@ -65,6 +65,7 @@ function detectCollaborations(papers) {
     for (let i = 0; i < autores.length - 1; i++) {
       for (let j = i + 1; j < autores.length; j++) {
         const relacion = { source: autores[i], target: autores[j], value: 1 };
+        relaciones.push(relacion)
         //si no hay relaciones, agrega una
         if (relaciones.length == 0) {
           relaciones.push(relacion);
@@ -85,8 +86,12 @@ function detectCollaborations(papers) {
         
       }
     }
+    relaciones.forEach(relacion => {
+      
+    });
  
   });
+  console.log(relaciones)
   relaciones.splice(0,1)
   return relaciones;
 }
@@ -99,6 +104,7 @@ $("#areaconocimiento").change(() => {
     url: "https://sga.unemi.edu.ec/api?a=apigrupoautores&area=" + area,
 
     success: (data) => {
+      console.log(data)
       $("#networks").empty();
       let nodos = autoresUnicos(data, area);
       collaborations.nodes = nodos;
@@ -109,11 +115,10 @@ $("#areaconocimiento").change(() => {
         nodeGroup: (d) => d.group,
         nodeTitle: (d) => `${d.id}\n${d.group}`,
         linkStrokeWidth: (l) => Math.sqrt(l.value),
-        width: 900,
-        height: 600,
-        //invalidation, // a promise to stop the simulation when the cell is re-run
+        width: 600,
+        height: 500,
+        //invalidation// a promise to stop the simulation when the cell is re-run
       });
-      console.log(collaborations);
       $(chart).appendTo("#networks");
     },
   });
@@ -151,7 +156,7 @@ function ForceGraph({
   nodeStroke = "#fff", // node stroke color
   nodeStrokeWidth = 1.5, // node stroke width, in pixels
   nodeStrokeOpacity = 1, // node stroke opacity
-  nodeRadius = 5, // node radius, in pixels
+  nodeRadius = 6, // node radius, in pixels
   nodeStrength,
   linkSource = ({source}) => source, // given d in links, returns a node identifier string
   linkTarget = ({target}) => target, // given d in links, returns a node identifier string
@@ -161,8 +166,8 @@ function ForceGraph({
   linkStrokeLinecap = "round", // link stroke linecap
   linkStrength,
   colors = d3.schemeTableau10, // an array of color strings, for the node groups
-  width = 640, // outer width, in pixels
-  height = 400, // outer height, in pixels
+  width = 540, // outer width, in pixels
+  height = 300, // outer height, in pixels
   invalidation // when this promise resolves, stop the simulation
 } = {}) {
   // Compute values.
@@ -227,7 +232,7 @@ function ForceGraph({
   if (L) link.attr("stroke", ({index: i}) => L[i]);
   if (G) node.attr("fill", ({index: i}) => color(G[i]));
   if (T) node.append("title").text(({index: i}) => T[i]);
-  if (invalidation != null) invalidation.then(() => simulation.stop());
+  if (invalidation = null) invalidation.then(() => simulation.stop());
 
   function intern(value) {
     return value !== null && typeof value === "object" ? value.valueOf() : value;
