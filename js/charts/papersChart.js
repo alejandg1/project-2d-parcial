@@ -3,6 +3,10 @@ $(document).ready(function () {
     type: "GET",
     url: "https://sga.unemi.edu.ec/api?a=apitotalareapublicacion",
     data: {},
+    beforesend: () => {
+      $("#onload").show();
+      $("#content").hide();
+    },
     success: function (data) {
       areas = [];
       valores = [];
@@ -15,12 +19,14 @@ $(document).ready(function () {
         valores.push(valor);
       });
       graficAreas(areas, valores);
+      $("#onload").hide();
+      $("#content").show();
     },
   });
 });
 
 function graficAreas(areas, valores) {
-  var ctx = document.getElementById("papersChart");
+  var ctx = document.getElementById("papersChart");() => simulation.stop()
 
   const data = { labels: areas,
     datasets: [

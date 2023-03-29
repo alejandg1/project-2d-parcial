@@ -11,6 +11,7 @@ $(document).ready(() => {
     },
     success: (data) => {
       data.forEach((element) => {
+        console.log(element);
         let number = element.codigo,
           option = element.nombre,
           insert = "<option value=" + number + ">" + option + "</option>";
@@ -85,11 +86,7 @@ function detectCollaborations(papers) {
         }
         
       }
-    }
-    relaciones.forEach(relacion => {
-      
-    });
- 
+    } 
   });
   console.log(relaciones)
   relaciones.splice(0,1)
@@ -115,11 +112,12 @@ $("#areaconocimiento").change(() => {
         nodeGroup: (d) => d.group,
         nodeTitle: (d) => `${d.id}\n${d.group}`,
         linkStrokeWidth: (l) => Math.sqrt(l.value),
-        width: 600,
-        height: 500,
+        width: 1000,
+        height: 800,
         //invalidation// a promise to stop the simulation when the cell is re-run
       });
       $(chart).appendTo("#networks");
+      console.log(collaborations);
     },
   });
 });
